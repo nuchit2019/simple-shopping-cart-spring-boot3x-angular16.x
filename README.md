@@ -9,4 +9,4 @@ Step run app
 8. Run ng serve
 9. open http://localhost:4200/
 10. Test Shopping cart
-step-run-app.jpg
+![Run App](https://github.com/nuchit2019/simple-shopping-cart-spring-boot3x-angular16.x/raw/main/step-run-app.jpg)
