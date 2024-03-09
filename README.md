@@ -9,3 +9,4 @@ Step run app
 8. Run ng serve
 9. open http://localhost:4200/
 10. Test Shopping cart
+step-run-app.jpg
