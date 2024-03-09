@@ -7,7 +7,7 @@ Start shopping-card-ui
 2. initail product data
 3. open h2-console
 4. http://localhost:8089/h2-console
-5. exec sql script from file 
+5. Executing a SQL Script in the H2 Console from file... 
    - path: shopping-card-api/src/main/resources/dataXX.sql
 ---
 Start shopping-card-ui
