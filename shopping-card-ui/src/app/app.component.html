@@ -1,0 +1,60 @@
+<mat-toolbar color="primary">
+  <span>Shopping Cart App</span>
+  <span class="example-spacer"></span> 
+
+  <div>
+    <button mat-fab color="primary" aria-label="Example icon button with a home icon" 
+    (click)="openCartDialog()">
+      <mat-icon matBadge={{totalQty}} matBadgeColor="warn">shopping_cart</mat-icon>
+    </button>
+
+  </div>
+
+</mat-toolbar>
+
+<div class="main-body"> 
+
+  <mat-grid-list cols="3" rowHeight="1:1">
+    <div *ngFor="let product of products">
+
+      <mat-grid-tile>
+        <mat-card class="card">
+          <mat-card-header>
+            <mat-card-title>
+              <h1><b>{{ product.name }}</b></h1>
+            </mat-card-title>
+
+          </mat-card-header>
+          <mat-divider></mat-divider>
+          <mat-card-content>
+            <div class="row">{{ product.description }}</div>
+            <div class="row">Price: {{ product.price }}</div>
+            <div class="row">InStock: {{product.quantity }} </div>
+            <div class="row">Order: {{buyOrderByproductID(product.id)}}</div>
+            <div class="row">Onhand: {{stockOnHandByproductID(product.quantity,buyOrderByproductID(product.id))}} </div>
+          </mat-card-content>
+          <mat-divider></mat-divider>
+          <mat-divider></mat-divider>
+
+          <mat-card-actions>
+            <div class="element_style button-container">
+              <button mat-raised-button color="primary" (click)="addProductToCart(product)"
+                [disabled]="stockOnHandByproductID(product.quantity,buyOrderByproductID(product.id)) <= 0"
+                class="custom-card-action-button">BUY</button>
+              <span class="button-spacing"></span>
+
+              <button mat-raised-button color="warn" (click)="removeProductFormCart(product.id)"
+                class="custom-card-action-button"
+                [disabled]="buyOrderByproductID(product.id)<= 0"
+                >CANCEL</button>
+            </div>
+          </mat-card-actions>
+
+        </mat-card>
+
+      </mat-grid-tile>
+
+    </div>
+  </mat-grid-list>
+
+</div>

@@ -1,0 +1,147 @@
+<div mat-dialog-title>
+    <h1><b>Card Detail</b></h1>
+
+</div>
+<mat-divider></mat-divider>
+<mat-divider></mat-divider>
+
+<!-- <div  class="main-body"> -->
+<div>
+    <mat-tab-group>
+        <mat-tab label="New Order">
+            <div mat-dialog-title>
+                <h1><b>New Order</b></h1>
+            </div>
+            <mat-divider></mat-divider>
+            <div>
+                <table mat-table [dataSource]="dataSource" matSort>
+
+                    <ng-container matColumnDef="id">
+                        <th mat-header-cell *matHeaderCellDef mat-sort-header> Oder ID </th>
+                        <td mat-cell *matCellDef="let row"> {{row.id}} </td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="product_id">
+                        <th mat-header-cell *matHeaderCellDef mat-sort-header> Product ID </th>
+                        <td mat-cell *matCellDef="let row"> {{row.product_id}} </td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="name">
+                        <th mat-header-cell *matHeaderCellDef mat-sort-header> Product Name </th>
+                        <td mat-cell *matCellDef="let row"> {{row.name}} </td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="quantity">
+                        <th mat-header-cell *matHeaderCellDef mat-sort-header> Quantity </th>
+                        <td mat-cell *matCellDef="let row"> {{row.quantity}} </td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="price">
+                        <th mat-header-cell *matHeaderCellDef mat-sort-header> Price </th>
+                        <td mat-cell *matCellDef="let row"> {{row.price| currency:'฿':'symbol':'1.2-2'}} </td>
+                    </ng-container>
+
+                    <!-- <ng-container matColumnDef="userName">
+                        <th mat-header-cell *matHeaderCellDef mat-sort-header> UserName </th>
+                        <td mat-cell *matCellDef="let row"> {{row.userName}} </td>
+                    </ng-container> -->
+
+                    <ng-container matColumnDef="status">
+                        <th mat-header-cell *matHeaderCellDef mat-sort-header> Status </th>
+                        <td mat-cell *matCellDef="let row"> {{row.status}} </td>
+                    </ng-container>
+
+                    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+                </table>
+                <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Select page of users"></mat-paginator>
+
+                <mat-divider></mat-divider>
+
+                <div class="grand_total_element_style">
+                    <!-- <span class="grandTotal"> -->
+                        <!-- <h1><b>Grand Total:</b> {{grandTotalPending}}</h1> -->
+                        <h1><b>Grand Total:</b> {{ grandTotalPending | currency:'฿':'symbol':'1.2-2' }}</h1>
+                    <!-- </span> -->
+                </div>
+
+                <mat-divider></mat-divider>
+
+                <div class="element_style">
+                    <button mat-raised-button color="warn" (click)="emptyCartByUser()"
+                        [disabled]="orderStatus?.length <=0" style="margin-right: 10px">Empty Cart</button>
+
+                    <button mat-raised-button color="primary" (click)="CheckOut()" [disabled]="orderStatus?.length <=0"
+                        style="margin-right: 10px">Check Out</button>
+
+                </div>
+            </div>
+
+
+        </mat-tab>
+        <mat-tab label="Confirm Order">
+            <div mat-dialog-title>
+                <h1><b>Confirm Order</b></h1>
+            </div>
+            <mat-divider></mat-divider>
+
+            <div>
+                <table mat-table [dataSource]="dataSource2" matSort>
+
+                    <ng-container matColumnDef="id">
+                        <th mat-header-cell *matHeaderCellDef mat-sort-header> Oder ID </th>
+                        <td mat-cell *matCellDef="let row"> {{row.id}} </td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="product_id">
+                        <th mat-header-cell *matHeaderCellDef mat-sort-header> Product ID </th>
+                        <td mat-cell *matCellDef="let row"> {{row.product_id}} </td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="name">
+                        <th mat-header-cell *matHeaderCellDef mat-sort-header> Product Name </th>
+                        <td mat-cell *matCellDef="let row"> {{row.name}} </td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="quantity">
+                        <th mat-header-cell *matHeaderCellDef mat-sort-header> Quantity </th>
+                        <td mat-cell *matCellDef="let row"> {{row.quantity}} </td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="price">
+                        <th mat-header-cell *matHeaderCellDef mat-sort-header> Price </th>
+                        <td mat-cell *matCellDef="let row"> {{row.price | currency:'฿':'symbol':'1.2-2'}} </td>
+                    </ng-container>
+
+                    <!-- <ng-container matColumnDef="userName">
+                        <th mat-header-cell *matHeaderCellDef mat-sort-header> UserName </th>
+                        <td mat-cell *matCellDef="let row"> {{row.userName}} </td>
+                    </ng-container> -->
+
+                    <ng-container matColumnDef="status">
+                        <th mat-header-cell *matHeaderCellDef mat-sort-header> Status </th>
+                        <td mat-cell *matCellDef="let row"> {{row.status}} </td>
+                    </ng-container>
+
+                    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+                </table>
+
+                <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Select page of users"></mat-paginator>
+
+
+                <mat-divider></mat-divider>
+                <div class="grand_total_element_style">
+                    <!-- <span class="grandTotal"> -->
+                        <!-- <h1><b>Grand Total:</b> {{grandTotalConfirm}}</h1> -->
+                        <h1><b>Grand Total:</b> {{ grandTotalConfirm | currency:'฿':'symbol':'1.2-2' }}</h1>
+                    <!-- </span> -->
+                </div>
+
+            </div>
+
+        </mat-tab>
+    </mat-tab-group>
+</div>

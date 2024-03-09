@@ -1,0 +1,58 @@
+// {
+//   "employees": [
+//     {
+//       "firstName": "Nuchit111",
+//       "lastName": "Atjanawat",
+//       "email": "Nuchit@gmail.com",
+//       "phone": "0989205555",
+//       "address": "N247 Lad Prao 101",
+//       "province": "Bankok",
+//       "id": "2"
+//     },
+//     {
+//       "id": "3",
+//       "firstName": "Nuchit 33333",
+//       "lastName": "Atjanawat",
+//       "email": "Nuchit@gmail.com",
+//       "phone": "0989205555",
+//       "address": "N247 Lad Prao 101",
+//       "province": "Bankok"
+//     },
+//     {
+//       "firstName": "Nuchit 3333333",
+//       "lastName": "Atjanawat",
+//       "email": "Nuchit@gmail.com",
+//       "phone": "0989205555",
+//       "address": "N247 Lad Prao 101",
+//       "province": "Bankok",
+//       "id": "4"
+//     },
+//     {
+//       "firstName": "Nuchit *****",
+//       "lastName": "Atjanawat",
+//       "email": "Nuchit@gmail.com",
+//       "phone": "0989205555",
+//       "address": "N247 Lad Prao 101",
+//       "province": "Bankok",
+//       "id": "8edc"
+//     },
+//     {
+//       "id": "0f79",
+//       "firstName": "Nuchit 33333 555",
+//       "lastName": "Atjanawat",
+//       "email": "Nuchit@gmail.com",
+//       "phone": "0989205555",
+//       "address": "N247 Lad Prao 101",
+//       "province": "Bankok"
+//     }
+//   ]
+// }
+
+
+{
+  "products": [
+    { "id": 1, "name": "Product 1", "price": 19.99 },
+    { "id": 2, "name": "Product 2", "price": 29.99 }, 
+  ],
+  "cart": []
+}
