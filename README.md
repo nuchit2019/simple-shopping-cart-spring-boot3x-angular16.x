@@ -6,7 +6,8 @@ Step run app
 5. exec sql script from file
 6. ...path: shopping-card-api/src/main/resources/dataXX.sql
 7. Start shopping-card-ui
-8. Run ng serve
-9. open http://localhost:4200/
-10. Test Shopping cart
+   npm install
+   Run ng serve
+   open http://localhost:4200/
+   Test Shopping cart
 ![Run App](https://github.com/nuchit2019/simple-shopping-cart-spring-boot3x-angular16.x/raw/main/step-run-app.jpg)
