@@ -1,9 +1,9 @@
 
 Step run app
 ---
-Start shopping-card-ui
+Start shopping-cart-ui
 ---
-1. Start shopping-card-ui 
+1. Start shopping-cart-ui 
    - default port:8089
 2. initail product data
 3. open h2-console
@@ -11,7 +11,7 @@ Start shopping-card-ui
 5. Executing a SQL Script in the H2 Console from file...
    - path: shopping-card-api/src/main/resources/dataXX.sql
 ---
-Start shopping-card-ui
+Start shopping-cart-ui
 ---
 1. VSCode opend folder project shopping-card-ui
 2. New Terminal
