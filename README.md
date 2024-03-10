@@ -8,8 +8,10 @@ Start shopping-cart-ui
 2. initail product data
 3. open h2-console
    - http://localhost:8089/h2-console
-5. Executing a SQL Script in the H2 Console from file...
-   - path: shopping-card-api/src/main/resources/dataXX.sql
+5. ~~Executing a SQL Script in the H2 Console from file...~~
+   - ~~path: shopping-card-api/src/main/resources/dataXX.sql~~
+6. Update application.properties
+   - Add line spring.jpa.defer-datasource-initialization=true
 ---
 Start shopping-cart-ui
 ---
