@@ -15,7 +15,7 @@ Start shopping-card-ui
 ---
 1. VSCode opend folder project shopping-card-ui
 2. New Terminal
-   - Run npm install
+   - Run npm install _(First time only)_
    - Run ng serve 
 3. open http://localhost:4200/
 4. Test UI Shopping cart
