@@ -1,0 +1,59 @@
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.main-body {
+  padding-top: 20px;
+  margin: 0 auto;
+  max-width: 1248px;
+  mat-form-field {
+    width: 100%;
+  }
+}
+
+mat-card {
+  margin: 16px;
+  width: 300px;
+  height: 240px;
+}
+
+.button-spacing {
+  margin-right: 16px;
+}
+
+// .icon-shopping {
+//   font-size: x-large;
+// }
+
+.mat-icon {
+  // font-size: 50px;
+  padding-right: 10px;
+  transform: scale(1);
+}
+
+.example-button-container {
+  display: flex;
+  justify-content: center;
+  width: 120px;
+}
+
+.element_style {
+  margin: 10px;
+  margin-left: 30px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.custom-card-action-button {
+  flex: 1;
+  min-width: 100px;  
+}
+
+///================================
+// Grid
+mat-grid-tile {
+  background: rgb(242, 251, 251);
+}
