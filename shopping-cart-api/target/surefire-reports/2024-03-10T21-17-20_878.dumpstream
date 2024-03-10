@@ -1,0 +1,5 @@
+# Created at 2024-03-10T21:17:21.121
+Boot Manifest-JAR contains absolute paths in classpath 'D:\Spring\tcap\2\simple-shopping-cart-spring-boot3x-angular16.x\shopping-cart-api\target\test-classes'
+Hint: <argLine>-Djdk.net.URLClassPath.disableClassPathURLCheck=true</argLine>
+'other' has different root
+
