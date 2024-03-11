@@ -5,7 +5,7 @@ Start shopping-cart-ui
 ---
 1. Start shopping-cart-ui 
    - default port:8089
-2. Auro initail product data
+2. Auro initial Product data from /main/resources/data.sql
 3. open h2-console 
    - http://localhost:8089/h2-console
 ---
