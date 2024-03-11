@@ -11,7 +11,7 @@ Start shopping-cart-ui
 ---
 Start shopping-cart-ui
 ---
-1. VSCode opend folder project shopping-card-ui
+1. VSCode opend folder project shopping-cart-ui
 2. New Terminal
    - Run npm install _(First time only)_
    - Run ng serve 
